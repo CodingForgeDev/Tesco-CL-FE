@@ -1,0 +1,267 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #059669; /* Emerald 600 */
+  --color-primary-dark: #047857; /* Emerald 700 */
+  --color-secondary: #10b981; /* Emerald 500 */
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --radius-xl: 24px;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #334155;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Background Mesh Gradients */
+body::before {
+  content: "";
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  background: rgba(167, 243, 208, 0.4);
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -10%;
+  right: -10%;
+  width: 50%;
+  height: 50%;
+  background: rgba(191, 219, 254, 0.4);
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  border-radius: 24px;
+}
+
+.glass-panel-dark {
+  background: rgba(15, 23, 42, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+.bg-emerald-700 {
+  background-color: var(--color-primary-dark) !important;
+}
+
+.bg-slate-800 {
+  background-color: var(--color-slate-800) !important;
+}
+
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+.text-emerald-700 {
+  color: var(--color-primary-dark) !important;
+}
+
+.btn-primary {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: white !important;
+  border-radius: 9999px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  padding: 0.75rem 2rem !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark) !important;
+  border-color: var(--color-primary-dark) !important;
+}
+
+.nav-link.active {
+  color: var(--color-primary) !important;
+  font-weight: 700 !important;
+}
+
+.rounded-5xl {
+  border-radius: 24px !important;
+}
+
+.rounded-4xl {
+  border-radius: 24px !important;
+}
+
+.product-card-glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 24px !important;
+}
+
+.product-card-glass:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Carousel Customization */
+#related-products-carousel .carousel-control-prev,
+#related-products-carousel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+#related-products-carousel .carousel-control-prev { left: -20px; }
+#related-products-carousel .carousel-control-next { right: -20px; }
+
+#related-products-carousel .carousel-control-prev-icon,
+#related-products-carousel .carousel-control-next-icon {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(200deg);
+    width: 20px;
+    height: 20px;
+}
+
+/* Skeleton Loading */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.skeleton {
+    background: linear-gradient(90deg, rgba(0,0,0,0.06) 25%, rgba(0,0,0,0.1) 37%, rgba(0,0,0,0.06) 63%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+    border-radius: 24px;
+}
+
+.skeleton-glass {
+    background: linear-gradient(90deg, rgba(255,255,255,0.4) 25%, rgba(255,255,255,0.7) 37%, rgba(255,255,255,0.4) 63%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+    border-radius: 24px;
+}
+
+.sidebar-nav-item {
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    color: #64748b !important;
+    padding: 0.85rem 1.25rem !important;
+    border-radius: 24px !important;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.sidebar-nav-item:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--color-primary) !important;
+}
+
+.sidebar-nav-item.active {
+    background: var(--color-primary) !important;
+    color: white !important;
+    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.2);
+}
+
+.nav-item-glass {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    color: #475569 !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.2s ease;
+}
+
+.nav-item-glass:hover, .nav-item-glass.active {
+    color: var(--color-primary) !important;
+}
+
+.dropdown-menu {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-radius: 24px !important;
+    padding: 0.75rem !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05) !important;
+    margin-top: 10px !important;
+}
+
+.dropdown-item {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: #64748b !important;
+    padding: 0.6rem 1rem !important;
+    border-radius: 24px !important;
+    transition: all 0.2s ease;
+}
+
+/* Comparison Modal */
+.comparison-modal .modal-content {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 24px;
+}
+
+.product-card-glass.ring-2 {
+    box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.transition-all {
+    transition: all 0.2s ease;
+}
+
+.group:hover .group-hover\:translate-x-1 {
+    transform: translateX(4px);
+}
+
+.group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.z-50 {
+    z-index: 50;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
