@@ -171,7 +171,7 @@ const Home = () => {
             <div className="text-center mb-5 max-w-2xl mx-auto">
               <Badge
                 bg="primary"
-                className="bg-opacity-10 text-primary rounded-pill px-4 py-2 text-uppercase fw-black tracking-widest mb-4"
+                className="bg-opacity-10 text-white rounded-pill px-4 py-2 text-uppercase fw-black tracking-widest mb-4"
                 style={{ fontSize: "10px" }}
               >
                 Strategic Pillars

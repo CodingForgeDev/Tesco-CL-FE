@@ -21,13 +21,13 @@ const ProductGrid: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <Row className="g-4">
+      <Row className="g-4 align-items-stretch">
         {isLoading ? (
           // Skeleton Loading State
           [...Array(6)].map((_, idx) => (
-            <Col md={6} key={`skeleton-${idx}`}>
-              <Card className="h-100 product-card-glass border-white/50 rounded-4xl p-4 shadow-sm">
-                <Card.Body className="p-0 d-flex flex-column">
+            <Col md={6} key={`skeleton-${idx}`} className="d-flex">
+              <Card className="h-100 product-card-glass product-card-equal border-white/50 rounded-4xl p-4 shadow-sm">
+                <Card.Body className="p-0 d-flex flex-column flex-grow-1">
                   <div className="d-flex justify-content-between align-items-start mb-4">
                     <Skeleton
                       className="rounded-2xl"

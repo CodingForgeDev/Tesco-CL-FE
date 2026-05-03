@@ -23,8 +23,8 @@ const ProductCard: React.FC<Props> = ({
   return (
     <LazyLoad
       placeholder={
-        <Card className="h-100 product-card-glass border-white/50 rounded-4xl p-4 shadow-sm">
-          <Card.Body className="p-0 d-flex flex-column">
+        <Card className="h-100 product-card-glass product-card-equal border-white/50 rounded-4xl p-4 shadow-sm">
+          <Card.Body className="p-0 d-flex flex-column flex-grow-1">
             <div className="d-flex justify-content-between align-items-start mb-4">
               <Skeleton
                 className="rounded-2xl"
@@ -88,7 +88,7 @@ const ProductCard: React.FC<Props> = ({
           className={`h-100 product-card-glass product-card-equal border-white/50 rounded-4xl p-4 shadow-sm text-decoration-none group transition-all overflow-hidden ${selectedProducts.includes(product.id) ? "ring-2 ring-primary bg-primary/5" : ""} w-100`}
           id={`prod-card-${idx}`}
         >
-          <Card.Body className="p-0 d-flex flex-column">
+          <Card.Body className="p-0 d-flex flex-column flex-grow-1">
             <div
               className="mb-4 rounded-3xl overflow-hidden bg-slate-100"
               style={{ aspectRatio: "16/9" }}
