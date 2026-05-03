@@ -172,7 +172,7 @@ const Products = () => {
                   <Card
                     as={Link as any}
                     to={`/product/${f.id}`}
-                    className="border-0 product-card-glass shadow-xl rounded-4xl p-2 h-100 text-decoration-none overflow-hidden"
+                    className="border-0 product-card-glass product-card-equal shadow-xl rounded-4xl p-2 h-100 text-decoration-none overflow-hidden"
                   >
                     <div
                       className="rounded-4xl overflow-hidden shadow-sm position-relative"
@@ -512,7 +512,7 @@ const Products = () => {
                           <Card
                             as={Link as any}
                             to={`/product/${product.id}`}
-                            className={`h-100 product-card-glass border-white/50 rounded-4xl p-4 shadow-sm text-decoration-none group transition-all overflow-hidden ${selectedProducts.includes(product.id) ? "ring-2 ring-primary bg-primary/5" : ""}`}
+                            className={`h-100 product-card-glass product-card-equal border-white/50 rounded-4xl p-4 shadow-sm text-decoration-none group transition-all overflow-hidden ${selectedProducts.includes(product.id) ? "ring-2 ring-primary bg-primary/5" : ""}`}
                             id={`prod-card-${idx}`}
                           >
                             <Card.Body className="p-0 d-flex flex-column">

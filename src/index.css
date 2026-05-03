@@ -118,11 +118,15 @@ body::after {
   border: 1px solid rgba(255, 255, 255, 0.8);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   border-radius: 24px !important;
+  overflow: hidden;
+}
+
+/* Tall/equal-height product cards (only apply where needed) */
+.product-card-equal {
   display: flex;
   flex-direction: column;
   height: 100%;
   min-height: 360px;
-  overflow: hidden;
 }
 
 .product-card-glass:hover {
@@ -131,11 +135,11 @@ body::after {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
 }
 
-/* Ensure card body stretches so footer stays aligned */
-.product-card-glass .card-body {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
+/* Ensure card body stretches so footer stays aligned for tall product cards */
+.product-card-equal .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
 
 /* Higher-contrast crop badges inside product cards */
