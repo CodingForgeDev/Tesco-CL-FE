@@ -164,15 +164,16 @@ const Products = () => {
 
           <Row className="g-4 position-relative z-10">
             {featuredList.map((f, i) => (
-              <Col lg={4} key={i}>
+              <Col lg={4} key={i} className="d-flex">
                 <motion.div
                   whileHover={{ y: -5 }}
                   transition={{ duration: 0.3 }}
+                  className="w-100 d-flex"
                 >
                   <Card
                     as={Link as any}
                     to={`/product/${f.id}`}
-                    className="border-0 product-card-glass product-card-equal shadow-xl rounded-4xl p-2 h-100 text-decoration-none overflow-hidden"
+                    className="border-0 product-card-glass product-card-equal shadow-xl rounded-4xl p-2 h-100 text-decoration-none overflow-hidden w-100"
                   >
                     <div
                       className="rounded-4xl overflow-hidden shadow-sm position-relative"
@@ -445,7 +446,7 @@ const Products = () => {
                   ))
                 ) : filteredProducts.length > 0 ? (
                   filteredProducts.map((product, idx) => (
-                    <Col md={6} key={product.id}>
+                    <Col md={6} key={product.id} className="d-flex">
                       <LazyLoad
                         placeholder={
                           <Card className="h-100 product-card-glass border-white/50 rounded-4xl p-4 shadow-sm">
@@ -490,7 +491,7 @@ const Products = () => {
                         <motion.div
                           whileHover={{ y: -5 }}
                           transition={{ duration: 0.2 }}
-                          className="position-relative"
+                          className="position-relative w-100 d-flex"
                         >
                           <div
                             className={`position-absolute top-0 end-0 p-4 z-10 transition-all ${selectedProducts.includes(product.id) ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
@@ -512,7 +513,7 @@ const Products = () => {
                           <Card
                             as={Link as any}
                             to={`/product/${product.id}`}
-                            className={`h-100 product-card-glass product-card-equal border-white/50 rounded-4xl p-4 shadow-sm text-decoration-none group transition-all overflow-hidden ${selectedProducts.includes(product.id) ? "ring-2 ring-primary bg-primary/5" : ""}`}
+                            className={`h-100 product-card-glass product-card-equal border-white/50 rounded-4xl p-4 shadow-sm text-decoration-none group transition-all overflow-hidden ${selectedProducts.includes(product.id) ? "ring-2 ring-primary bg-primary/5" : ""} w-100`}
                             id={`prod-card-${idx}`}
                           >
                             <Card.Body className="p-0 d-flex flex-column">
