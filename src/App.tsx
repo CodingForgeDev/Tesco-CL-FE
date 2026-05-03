@@ -1,18 +1,18 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
-import { Header, Footer } from './components/Navigation';
-import WhatsAppButton from './components/WhatsAppButton';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contribution from './pages/Contribution';
-import QualityControl from './pages/QualityControl';
-import Products from './pages/Products';
-import Seeds from './pages/Seeds';
-import Crops from './pages/Crops';
-import Companies from './pages/Companies';
-import ProductDetail from './pages/ProductDetail';
-import Contact from './pages/Contact';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Container } from "react-bootstrap";
+import { Header, Footer } from "./components/Navigation";
+import WhatsAppButton from "./components/WhatsAppButton";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contribution from "./pages/Contribution";
+import QualityControl from "./pages/QualityControl";
+import Products from "./pages/products";
+import Seeds from "./pages/Seeds";
+import Crops from "./pages/Crops";
+import Companies from "./pages/Companies";
+import ProductDetail from "./pages/ProductDetail";
+import Contact from "./pages/Contact";
 
 export default function App() {
   return (
