@@ -113,17 +113,40 @@ body::after {
 }
 
 .product-card-glass {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border-radius: 24px !important;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 24px !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 360px;
+  overflow: hidden;
 }
 
 .product-card-glass:hover {
     background: rgba(255, 255, 255, 0.95);
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Ensure card body stretches so footer stays aligned */
+.product-card-glass .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+/* Higher-contrast crop badges inside product cards */
+.crop-badge {
+  background: #ffffff !important;
+  color: var(--color-slate-800) !important;
+  border: 1px solid rgba(241,245,249,1) !important;
+  font-weight: 700 !important;
+  padding: 0.25rem 0.6rem !important;
+  font-size: 8px !important;
+  border-radius: 9999px !important;
 }
 
 /* Carousel Customization */
