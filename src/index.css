@@ -233,6 +233,28 @@ body::after {
     color: var(--color-primary) !important;
 }
 
+/* Footer link color fixes and hover-compatible helpers */
+#site-footer a,
+#site-footer a:visited {
+  color: #64748b !important;
+  text-decoration: none !important;
+}
+
+#site-footer a:hover,
+#site-footer a:focus {
+  color: var(--color-primary) !important;
+  text-decoration: none !important;
+}
+
+/* Utility compatibility for template classes used in components */
+.hover-text-primary:hover {
+  color: var(--color-primary) !important;
+}
+.hover-bg-primary:hover {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+}
+
 .dropdown-menu {
     background: rgba(255, 255, 255, 0.9) !important;
     backdrop-filter: blur(20px);
