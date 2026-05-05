@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import { AnimatePresence } from "motion/react";
 import { Header, Footer } from "./components/Navigation";
 import WhatsAppButton from "./components/WhatsAppButton";
+import ScrollToTop from "./components/ScrollToTop";
+import LoadingScreen from "./components/LoadingScreen";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contribution from "./pages/Contribution";
@@ -15,8 +18,22 @@ import ProductDetail from "./pages/ProductDetail";
 import Contact from "./pages/Contact";
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate initial loading
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Router>
+      <ScrollToTop />
+      <AnimatePresence mode="wait">
+        {loading && <LoadingScreen key="loader" />}
+      </AnimatePresence>
       <div className="min-vh-100 d-flex flex-column bg-light" id="app-wrapper">
         <Header />
         <main className="flex-grow-1 pt-24" id="main-content">

@@ -314,3 +314,65 @@ body::after {
     -webkit-overflow-scrolling: touch;
 }
 
+/* Mobile Navbar Fixes */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        margin-top: 1.5rem;
+        padding-bottom: 1rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    .navbar-nav .nav-link {
+        padding: 0.75rem 0 !important;
+        font-size: 14px !important;
+    }
+    .dropdown-menu {
+        background: transparent !important;
+        backdrop-filter: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding-left: 1rem !important;
+    }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .display-1 { font-size: 3rem !important; }
+    .display-2 { font-size: 2.5rem !important; }
+    .display-3 { font-size: 2.25rem !important; }
+    .display-4 { font-size: 2rem !important; }
+    .display-5 { font-size: 1.75rem !important; }
+    .display-6 { font-size: 1.5rem !important; }
+    
+    .fs-1 { font-size: 2rem !important; }
+    .fs-2 { font-size: 1.75rem !important; }
+    .fs-3 { font-size: 1.5rem !important; }
+    .fs-4 { font-size: 1.25rem !important; }
+    .fs-5 { font-size: 1.1rem !important; }
+}
+
+/* Responsive Spacing & Layout Utilities */
+@media (max-width: 992px) {
+    .pt-24 { padding-top: 5rem !important; }
+    .min-vh-lg-80 { min-height: auto !important; }
+    .px-3 { padding-left: 1rem !important; padding-right: 1rem !important; }
+}
+
+.rounded-full {
+    border-radius: 9999px !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+

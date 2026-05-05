@@ -205,37 +205,37 @@ const Products: React.FC = () => {
             className="position-fixed bottom-0 start-50 translate-middle-x mb-4 z-50 w-100 px-3"
             style={{ maxWidth: "800px" }}
           >
-            <div className="product-card-glass bg-slate-900 border-white/10 rounded-full px-5 py-3 shadow-2xl d-flex align-items-center justify-content-between text-white border">
-              <div className="d-flex align-items-center gap-3">
-                <div className="bg-primary/20 p-2 rounded-xl text-primary">
-                  <Layers size={20} />
+            <div className="product-card-glass bg-slate-900 border-white/10 rounded-full px-3 px-md-5 py-2 py-md-3 shadow-2xl d-flex align-items-center justify-content-between text-white border">
+              <div className="d-flex align-items-center gap-2 gap-md-3">
+                <div className="bg-primary/20 p-1 p-md-2 rounded-xl text-primary d-none d-sm-block">
+                  <Layers size={18} />
                 </div>
                 <div>
-                  <span className="fw-black tracking-widest text-[11px] text-primary-subtle d-block">
+                  <span className="fw-black tracking-widest text-[9px] md:text-[11px] text-primary-subtle d-block">
                     PROD_COMPARISON
                   </span>
-                  <span className="fw-bold">
-                    {selectedProducts.length} Product
-                    {selectedProducts.length > 1 ? "s" : ""} Selected
+                  <span className="fw-bold small md:normal">
+                    {selectedProducts.length} Item
+                    {selectedProducts.length > 1 ? "s" : ""}
                   </span>
                 </div>
               </div>
-              <div className="d-flex align-items-center gap-3">
+              <div className="d-flex align-items-center gap-2 gap-md-3">
                 <Button
                   variant="link"
-                  className="text-slate-400 text-decoration-none small fw-black tracking-widest p-0 h-fit"
+                  className="text-slate-400 text-decoration-none x-small fw-black tracking-widest p-0 h-fit"
                   onClick={() => setSelectedProducts([])}
                 >
-                  CLEAR ALL
+                  CLEAR
                 </Button>
-                <div className="h-8 w-[1px] bg-white/10" />
+                <div className="h-6 w-[1px] bg-white/10" />
                 <Button
                   variant="primary"
-                  className="rounded-full px-5 py-2 fw-black tracking-widest text-[11px] shadow-lg border-0"
+                  className="rounded-full px-3 px-md-5 py-1 py-md-2 fw-black tracking-widest text-[9px] md:text-[11px] shadow-lg border-0"
                   disabled={selectedProducts.length < 2}
                   onClick={() => setShowComparison(true)}
                 >
-                  COMPARE NOW
+                  COMPARE
                 </Button>
               </div>
             </div>

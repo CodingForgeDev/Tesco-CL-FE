@@ -52,7 +52,7 @@ const Contribution = () => {
           ))}
         </Row>
 
-        <Card className="glass-panel-dark border-white/30 rounded-4xl p-5 shadow-xl mt-5">
+        <Card className="glass-panel-dark border-white/30 rounded-4xl p-4 p-md-5 shadow-xl mt-5">
           <Row className="align-items-center">
             <Col lg={7}>
               <h2 className="fw-bold text-slate-900 mb-4">Sustainability Goals 2030</h2>

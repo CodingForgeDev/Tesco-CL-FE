@@ -83,9 +83,9 @@ const About = () => {
                 <div className="glass-panel border-white shadow-2xl rounded-5xl overflow-hidden p-3">
                   <div
                     className="rounded-4xl overflow-hidden"
-                    style={{ height: "450px" }}
+                    style={{ minHeight: "350px", height: "auto" }}
                   >
-                    <div className="bg-primary-dark w-100 h-100 d-flex align-items-center justify-content-center p-5 text-center text-white position-relative">
+                    <div className="bg-primary-dark w-100 h-100 d-flex align-items-center justify-content-center p-4 p-md-5 text-center text-white position-relative">
                       <div className="position-absolute top-0 end-0 p-4 opacity-5">
                         <Factory size={300} strokeWidth={1} />
                       </div>
@@ -137,8 +137,12 @@ const About = () => {
                 className="bg-white border border-slate-100 p-5 rounded-5xl shadow-lg position-relative"
               >
                 <Quote
+                  className="position-absolute top-0 start-0 translate-middle text-primary opacity-10 d-none d-md-block"
                   size={80}
-                  className="position-absolute top-0 start-0 translate-middle text-primary opacity-10"
+                />
+                <Quote
+                  className="position-absolute top-0 start-0 translate-middle text-primary opacity-10 d-md-none"
+                  size={40}
                 />
                 <Row className="g-5 align-items-center">
                   <Col md={4} className="text-center">
@@ -310,8 +314,8 @@ const About = () => {
                   <motion.div
                     initial={{ x: i % 2 === 0 ? -30 : 30, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    className="bg-white/5 border border-white/10 p-5 rounded-5xl backdrop-blur-sm"
+                    viewport={{ once: true, margin: "-50px" }}
+                    className="bg-white/5 border border-white/10 p-4 p-md-5 rounded-5xl backdrop-blur-sm"
                   >
                     <h2 className="display-4 fw-black text-primary mb-3">
                       {milestone.year}

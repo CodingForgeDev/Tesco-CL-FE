@@ -65,7 +65,7 @@ const ProductDetail = () => {
 
                     <Row className="g-5 mt-2">
                         <Col lg={5}>
-                            <div className="sticky-top" style={{ top: '100px' }}>
+                            <div className="sticky-md-top" style={{ top: '100px' }}>
                                 <div className="product-card-glass border-white/80 rounded-5xl p-3 shadow-2xl overflow-hidden position-relative">
                                     {isLoading ? (
                                         <div className="p-5 rounded-4xl text-center" style={{ minHeight: '350px', backgroundColor: 'rgba(0,0,0,0.05)' }}>
@@ -150,7 +150,7 @@ const ProductDetail = () => {
                                     </>
                                 )}
                                 
-                                <div className="product-card-glass border-white/50 rounded-4xl p-5 shadow-sm mb-5">
+                                <div className="product-card-glass border-white/50 rounded-4xl p-4 p-md-5 shadow-sm mb-5">
                                     <h5 className="fw-black text-slate-900 mb-4 d-flex align-items-center gap-3">
                                         <div className="bg-primary/10 p-2 rounded-xl"><Info size={20} className="text-primary" /></div> 
                                         Product Overview
@@ -209,7 +209,7 @@ const ProductDetail = () => {
                                 </Col>
                             </Row>
 
-                            <div className="product-card-glass border-white/80 rounded-5xl p-5 mb-5 shadow-xl bg-white/40">
+                            <div className="product-card-glass border-white/80 rounded-5xl p-4 p-md-5 mb-5 shadow-xl bg-white/40">
                                 <h4 className="fw-black text-slate-900 mb-5 d-flex align-items-center gap-3">
                                     <div className="bg-primary/10 p-2 rounded-xl"><FileText size={24} className="text-primary" /></div>
                                     Technical Analysis
@@ -265,11 +265,12 @@ const ProductDetail = () => {
                             ) : (
                                 <Carousel id="related-products-carousel" indicators={false} className="pb-4" interval={5000} pause="hover">
                                     {relatedProducts.reduce((acc, curr, idx) => {
-                                        if (idx % 3 === 0) acc.push(relatedProducts.slice(idx, idx + 3));
+                                        const perChunk = window.innerWidth < 768 ? 1 : (window.innerWidth < 992 ? 2 : 3);
+                                        if (idx % perChunk === 0) acc.push(relatedProducts.slice(idx, idx + perChunk));
                                         return acc;
                                     }, [] as (typeof relatedProducts)[]).map((group, groupIdx) => (
                                         <Carousel.Item key={groupIdx}>
-                                            <Row className="g-4 px-2">
+                                            <Row className="g-4 px-2 justify-content-center">
                                                 {group.map((item, idx) => (
                                                     <Col lg={4} md={6} key={idx}>
                                                         <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.2 }}>

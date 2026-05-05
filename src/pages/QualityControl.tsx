@@ -16,7 +16,7 @@ const QualityControl = () => {
 
         <Row className="g-5 align-items-center mb-5">
           <Col lg={6}>
-            <div className="glass-panel border-white/50 p-5 rounded-4xl shadow-lg">
+            <div className="glass-panel border-white/50 p-4 p-md-5 rounded-4xl shadow-lg">
               <h3 className="fw-bold text-slate-900 mb-4">Our Lab Standards</h3>
               <p className="text-slate-600 mb-4 lh-lg">
                 We operate a state-of-the-art Research & Development facility in Bahawalpur, equipped with HPLC and GC-MS technology to identify active ingredient purity down to 1 part per billion.

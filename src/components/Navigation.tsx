@@ -5,19 +5,26 @@ import { Menu, Globe, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPi
 
 export const Header = () => {
   const location = useLocation();
+  const [expanded, setExpanded] = React.useState(false);
 
   return (
     <div className="fixed-top pt-3 px-3 z-50">
-      <Navbar expand="lg" className="glass-panel rounded-full border border-white/50 max-w-6xl mx-auto px-4 py-2 shadow-2xl" id="main-nav" collapseOnSelect>
+      <Navbar 
+        expand="lg" 
+        expanded={expanded}
+        onToggle={(val) => setExpanded(val)}
+        className={`glass-panel border border-white/50 max-w-6xl mx-auto px-4 py-2 shadow-2xl transition-all duration-300 ${expanded ? 'rounded-4xl' : 'rounded-full'}`} 
+        id="main-nav" 
+        collapseOnSelect
+      >
         <Container fluid>
           <Navbar.Brand as={Link} to="/" className="d-flex align-items-center gap-3 fw-bold text-slate-800 fs-4" id="brand-logo">
             <div className="bg-primary rounded-full p-1 d-flex align-items-center justify-content-center shadow-lg" style={{ width: '40px', height: '40px' }}>
               <span className="text-white fw-black">T</span>
             </div>
             <div className="d-flex flex-column lh-1">
-              <span className="tracking-tighter fs-5 d-none d-sm-block text-slate-900" style={{ fontWeight: 800 }}>TESCO CHEMICAL</span>
-              <span className="text-primary d-none d-sm-block" style={{ fontSize: '9px', fontWeight: 700, letterSpacing: '5px', marginTop: '2px' }}>GROUP</span>
-              <span className="d-sm-none fs-5" style={{ fontWeight: 800 }}>TESCO</span>
+              <span className="tracking-tighter fs-6 fs-sm-5 d-sm-block text-slate-900" style={{ fontWeight: 800 }}>TESCO CHEMICAL</span>
+              <span className="text-primary d-sm-block" style={{ fontSize: '7px', fontWeight: 700, letterSpacing: '4px', marginTop: '2px' }}>GROUP</span>
             </div>
           </Navbar.Brand>
           
@@ -48,10 +55,10 @@ export const Header = () => {
               <Nav.Link 
                 as={Link} 
                 to="/contact" 
-                className="mt-3 mt-lg-0 ms-lg-3"
+                className="mt-2 mt-lg-0 ms-lg-3"
                 id="nav-link-contact"
               >
-                <Button variant="primary" className="rounded-full px-5 text-[10px] tracking-widest shadow-xl border-0 py-2 fw-black" id="nav-contact-btn">
+                <Button variant="primary" className="rounded-full px-4 px-lg-5 text-[9px] text-lg-[10px] tracking-widest shadow-xl border-0 py-2 fw-black" id="nav-contact-btn">
                   CONTACT US
                 </Button>
               </Nav.Link>
