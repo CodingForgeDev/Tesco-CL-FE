@@ -86,9 +86,9 @@ const Home = () => {
                     as={Link as any}
                     to="/products"
                     variant="primary"
-                    className="rounded-full px-5 py-3 fw-black tracking-widest text-[11px] shadow-xl border-0"
+                    className="rounded-full px-4 px-md-5 py-3 fw-black tracking-widest text-[10px] md:text-[11px] shadow-xl border-0 d-inline-flex align-items-center justify-content-center text-nowrap"
                   >
-                    EXPLORE SOLUTIONS <ArrowRight size={14} className="ms-2" />
+                    EXPLORE SOLUTIONS <ArrowRight size={14} className="ms-2 flex-shrink-0" />
                   </Button>
                   <Button
                     as={Link as any}

@@ -35,7 +35,7 @@ const About = () => {
               <motion.div {...fadeIn}>
                 <Badge
                   bg="primary"
-                  className="bg-opacity-10 text-primary rounded-pill px-4 py-2 text-uppercase fw-black tracking-[0.2em] mb-4"
+                  className="text-white rounded-pill px-4 py-2 text-uppercase fw-black tracking-[0.2em] mb-4"
                   style={{ fontSize: "10px" }}
                 >
                   Corporate Profile
@@ -201,7 +201,7 @@ const About = () => {
         <Container className="py-5 text-center">
           <Badge
             bg="primary"
-            className="bg-opacity-10 text-white rounded-pill px-4 py-2 text-uppercase fw-black tracking-widest mb-4"
+            className="text-white rounded-pill px-4 py-2 text-uppercase fw-black tracking-widest mb-4"
             style={{ fontSize: "10px" }}
           >
             Our DNA
@@ -260,7 +260,7 @@ const About = () => {
             <Col lg={6}>
               <Badge
                 bg="primary"
-                className="px-4 py-2 text-uppercase fw-black tracking-widest mb-4"
+                className="text-white px-4 py-2 text-uppercase fw-black tracking-widest mb-4"
                 style={{ fontSize: "10px" }}
               >
                 Historical Growth
